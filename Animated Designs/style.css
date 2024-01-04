@@ -1,22 +1,22 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
-    --primary-color: #e5ff00;
+    --primary-color: #00598d;
 }
 
 body{
+    background: #151515;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #151515;
 }
 
 .card{
     position: relative;
-    width: 359px;
+    width: 350px;
     height: 350px;
     display: flex;
     justify-content: flex-start;
@@ -44,7 +44,7 @@ body{
     justify-content: center;
 }
 
-.card .circle::before{
+.circle::before{
     content: '';
     position: absolute;
     top: 0;
@@ -52,10 +52,10 @@ body{
     width: 350px;
     height: 350px;
     border-radius: 50%;
-    background: #191919;
-    border: 8px solid var(--primary-color);
+    background: #ffffff;
+    border: 8px solid #00e1ff;
     filter: drop-shadow(0 0 10px var(--primary-color)) drop-shadow(0 0 60px var(--primary-color));
-    transition: 0.5s background 0.5s;
+    transition: 0.5s, background 0.5s;
     transition-delay: 0.75s, 1s;
 }
 
@@ -66,31 +66,31 @@ body{
     background: var(--primary-color);
 }
 
-.card .circle .logo{
+.card .circle .morty{
     position: relative;
-    width: 250px;
+    width: 400px;
     transition: 0.5s;
     transition-delay: 0.5s;
 }
 
-.card:hover .circle .logo{
+.card:hover .circle .morty{
     transform: scale(0);
     transition-delay: 0s;
 }
 
-.card .naruto{
+.card .evilMorty{
     position: absolute;
+    height: 300px;
     top: 0;
     left: 0;
-    transform: translate(-50%, -50%) scale(0) rotate(315deg);
-    height: 300px;
+    transform: translate(-50%, -50%) scale(0) rotate(5deg);
     transition: 0.5s ease-in-out;
 }
 
-.card:hover .naruto{
+.card:hover .evilMorty{
     top: 25%;
     left: 72%;
-    transform: translate(-50%, -50%) scale(0) rotate(315deg);
+    transform: translate(-50%, -50%) scale(1) rotate(5deg);
 }
 
 .card .content{
@@ -119,6 +119,7 @@ body{
 
 .card .content p{
     color: #fff;
+    font-weight: 600;
 }
 
 .card .content a{
