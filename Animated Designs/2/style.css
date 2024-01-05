@@ -12,3 +12,7 @@ img{
     border-radius: 10em 12em 14em 16em;
     transition: border-radius 500ms ease-in-out;
 }
+
+img:hover{
+    border-radius: 1em 1em 1em 1em;
+}
