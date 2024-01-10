@@ -1,0 +1,21 @@
+.A img:hover{
+    transform: scale(1.2);
+}
+.B img:hover{
+    transform: rotate(0.3turn);
+}
+.C img:hover{
+    transform: rotateX(50deg);
+}
+.D img:hover{
+    transform: translateX(50px);
+}
+.E img:hover{
+    transform: translate(30px, -30px);
+}
+.F img:hover{
+    transform: skew(30deg, 20deg);
+}
+.G img:hover{
+    transform: translateX(30px) rotate(30deg);
+}
