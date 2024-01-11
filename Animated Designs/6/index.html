@@ -7,21 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="slider">
-        <div class="slide-track">
-            <div class="slide">
-                <img src="Images/1.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="Images/2.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="Images/3.png" alt="">
-            </div>
-            <div class="slide">
-                <img src="Images/4.png" alt="">
-            </div>
+    <div class="logos">
+        <div class="logos-slide">
+            <img src="Images/1.png" alt="image">
+            <img src="Images/2.png" alt="image">
+            <img src="Images/3.png" alt="image">
+            <img src="Images/4.png" alt="image">
+            <img src="Images/1.png" alt="image">
+            <img src="Images/2.png" alt="image">
+            <img src="Images/3.png" alt="image">
+            <img src="Images/4.png" alt="image">
+            <img src="Images/1.png" alt="image">
+            <img src="Images/2.png" alt="image">
+            <img src="Images/3.png" alt="image">
+            <img src="Images/4.png" alt="image">
         </div>
     </div>
+    <script>
+        var copy = document.querySelector(".logos-slide").cloneNode(true);
+        document.querySelector(".logos").appendChild(copy);
+    </script>
 </body>
 </html>
