@@ -1,0 +1,59 @@
+body{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: navajowhite;
+}
+
+.box{
+    display: flex;
+}
+
+.inner{
+    width: 490px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 4em;
+    font-family: sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.inner:first-child{
+    background-color: indianred;
+    color: darkred;
+    transform-origin: right;
+    transform: perspective(100px)
+    rotateY(-15deg);
+}
+
+.inner:last-child{
+    background-color: lightcoral;
+    color: antiquewhite;
+    transform-origin: left;
+    transform: perspective(100px)
+    rotateY(15deg);
+}
+
+span{
+    position: absolute;
+    animation: marquee 5s linear infinite;
+}
+
+.inner:first-child span{
+    animation-delay: 2.5s;
+    left: -100%;
+}
+
+@keyframes marquee{
+    from{
+        left: 100%;
+    }
+
+    to{
+        left: -100%;
+    }
+}
