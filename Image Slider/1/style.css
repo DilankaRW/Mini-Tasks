@@ -1,0 +1,108 @@
+.accordion{
+    width: 80%;
+    height: 250px;
+    overflow: hidden;
+    margin: 50px auto;
+}
+
+ul{
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    --img-1: url("image.jpg");
+    --img-2: url("image.jpg");
+    --img-3: url("image.jpg");
+
+    &:nth-child(1){
+        background-image: var(--img-1);
+    }
+    &:nth-child(2){
+        background-image: var(--img-2);
+    }
+    &:nth-child(3){
+        background-image: var(--img-3);
+    }
+
+    width: 30%;
+    height: 250px;
+    display: table-cell;
+    vertical-align: bottom;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: all 500ms ease;
+}
+
+li div{
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+
+li div a{
+    display: block;
+    height: 250px;
+    width: 100%;
+    color: #fff;
+    position: relative;
+    z-index: 3;
+    vertical-align: bottom;
+    padding: 15px 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    transition: all 200ms ease;
+}
+
+li div a *{
+    width: 100%;
+    margin: 0;
+    text-overflow: ellipsis;
+    position: relative;
+    z-index: 5;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateX(-20px);
+    transition: all 400ms ease;
+}
+
+li div a h2{
+    font-family: 'Courier New', Courier, monospace;
+    text-overflow: clip;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+    top: 160px;
+}
+
+li div a p{
+    top: 160px;
+    font-size: 13.5px;
+}
+
+li div a *{
+    opacity: 0;
+}
+
+ul:hover li{
+    width: 10%;
+}
+
+ul:hover li:hover{
+    width: 80%;
+}
+
+ul:hover li:hover a{
+    background: #424242;
+}
+
+ul:hover li:hover a *{
+    opacity: 1;
+    transform: translateX(0);
+}
