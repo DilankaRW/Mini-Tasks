@@ -20,3 +20,43 @@
     background: #1abc9c;
 }
 
+.circle:nth-child(2){
+    transform: translate(35px, -50px);
+    background: #2ecc71;
+}
+
+.circle:nth-child(3){
+    transform: translate(-60px, 0);
+    background: #3498db;
+}
+
+.circle:nth-child(4){
+    transform: translate(60px, 0);
+    background: #9b59b6;
+}
+
+.circle:nth-child(5){
+    transform: translate(-35px, 50px);
+    background: #f1c40f;
+}
+
+.circle:nth-child(6){
+    transform: translate(35px, 50px);
+    background: #e67e22;
+}
+
+@keyframes spin{
+    50%{
+        filter: blur(0px);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes breath{
+    50%{
+        transform: translateY(0px);
+    }
+}
