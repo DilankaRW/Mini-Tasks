@@ -1,0 +1,22 @@
+.loader{
+    height: 125px;
+    width: 125px;
+    animation: spin 7s ease-in-out infinite;
+}
+
+.circle{
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    background: #fff;
+    mix-blend-mode: screen;
+    border-radius: 50%;
+    opacity: 0.75;
+    animation: breath 7s ease-in-out infinite;
+}
+
+.circle:nth-child(1){
+    transform: translate(-35px, -50px);
+    background: #1abc9c;
+}
+
