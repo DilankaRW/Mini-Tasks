@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    padding: 6% 0 0 2%;
+    background: #000;
+    color: #fff;
+    justify-content: center;
+    display: flex;
+}
+
+.card{
+    width: 60%;
+    height: 540px;
+    display: flex;
+    border: 5px solid white;
+    overflow-x: auto;
+    position: relative;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    position: sticky;
+    left: 0;
+}
