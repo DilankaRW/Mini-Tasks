@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #364b63;
+}
+
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.slider{
+    background: url(images/1.jpg);
+    background-size: cover;
+    height: 450px;
+    width: 800px;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, .3);
+    animation: animate 20s infinite;
+}
+
+@keyframes animate{
+    20%{
+        background: url(images/2.jpg);
+        background-size: cover;
+    }
+    40%{
+        background: url(images/3.jpg);
+        background-size: cover;
+    }
+    60%{
+        background: url(images/1.jpg);
+        background-size: cover;
+    }
+    80%{
+        background: url(images/2.jpg);
+        background-size: cover;
+    }
+    100%{
+        background: url(images/3.jpg);
+        background-size: cover;
+    }
+}
