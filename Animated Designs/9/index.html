@@ -28,6 +28,7 @@
             <h1>Sri Lanka</h1>
         </div>
         <div class="images">
+            <div class="bg"></div>
             <div class="img-1"></div>
             <div class="img-2"></div>
             <div class="img-3"></div>
@@ -35,17 +36,20 @@
             <div class="img-5"></div>
             <div class="img-6"></div>
             <div class="img-7"></div>
+            <div class="img-8"></div>
         </div>
     </section>
     <script>
+        gsap.from('.img-1', 1.2, {opacity:0, y:-150, delay: 0.5})
         gsap.from('.img-2', 1.2, {opacity:0, y:-150, delay: 0.5})
         gsap.from('.img-3', 1.2, {opacity:0, y:150, delay: 0.5})
         gsap.from('.img-4', 1.2, {opacity:0, y:350, delay: 1.9})
         gsap.from('.img-5', 1.2, {opacity:0, y:200, delay: 3.3})
-        gsap.from('.img-6', 1.2, {opacity:0, y:150, delay: 2.6})
-        gsap.from('.img-7', 1.2, {opacity:0, y:-80, delay: 4})
+        gsap.from('.img-6', 1.2, {opacity:0, y:-150, delay: 2.6})
+        gsap.from('.img-7', 1.2, {opacity:0, y:150, delay: 4})
         gsap.from('h1', 1.2, {opacity:0, y:-150, delay: 4.2})
         gsap.from('h2', 1.2, {opacity:0, y:-150, delay: 4.5})
+        gsap.from('.img-8', 1.2, {opacity:0, y:-80, delay: 4.5})
 
         const menu = document.querySelector('.menu');
         const toggle = document.getElementById('toggle');

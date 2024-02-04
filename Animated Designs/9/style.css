@@ -83,19 +83,27 @@ header nav #toggle{
     margin-bottom: -25px;
 }
 
+.home .images .bg,
 .home .images .img-1,
 .home .images .img-2,
 .home .images .img-3,
 .home .images .img-4,
 .home .images .img-5,
 .home .images .img-6,
-.home .images .img-7{
+.home .images .img-7,
+.home .images .img-8{
     width: 100%;
     height: 100vh;
     position: absolute;
     bottom: 0;
     left: 0;
     z-index: -10;
+}
+
+.home .images .bg{
+    background: url(images/sky.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 .home .images .img-1{
@@ -140,6 +148,12 @@ header nav #toggle{
     background-size: cover;
 }
 
+.home .images .img-8{
+    background: url(images/tree.png);
+    background-position: center;
+    background-size: cover;
+}
+
 @media (max-width:800px){
     .home{
         min-width: 390px;
@@ -152,7 +166,7 @@ header nav #toggle{
     .home h2{
         margin-top: 10px;
     }
-    
+
     header nav .menu{
         flex-direction: column;
         row-gap: 2rem;
