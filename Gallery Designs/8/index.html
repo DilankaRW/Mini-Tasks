@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="content">
+        <div class="images">
+            <img src="images/1.jpg" alt="img">
+            <img src="images/2.jpg" alt="img">
+            <img src="images/3.jpg" alt="img">
+        </div>
+    </div>
+    <script>
+        var indexValue = 0;
+        function slideShow(){
+        setTimeout(slideShow, 2500);
+            var x;
+            const img = document.querySelectorAll("img");
+            for(x = 0; x< img.length; x++){
+                img[x].style.display = "none";
+            }
+            indexValue++;
+            if(indexValue > img.length){indexValue = 1}
+            img[indexValue -1].style.display = "block";
+        }
+        slideShow();
+    </script>
+</body>
+</html>
