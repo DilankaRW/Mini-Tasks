@@ -85,3 +85,35 @@ header{
     color: #fff;
     font-weight: 300;
 }
+
+@media (max-width: 1366px) {
+    .parallax{
+        height: 123vh;
+    }
+}
+
+@media (max-width: 768px) {
+    header{
+        padding: 10px 20px;
+    }
+
+    .navigation a{
+        display: none;
+    }
+    
+    #text{
+        font-size: 2.5em;
+    }
+    
+    .parallax{
+        height: 47vh;
+    }
+
+    .sec{
+        padding: 35px;
+    }
+    
+    .sec h2{
+        font-size: 2em;
+    }
+}
