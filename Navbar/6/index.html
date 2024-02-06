@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <title>Document</title>
 </head>
 <body>
@@ -20,8 +20,38 @@
             <a href="#" class="action_btn">Get Start</a>
             <div class="toggle_btn">
                 <i><img src="menu-b.png" alt="m" height="25px" width="25px"></i>
+                <!-- <i class="fa-solid fa-bars"></i> -->
             </div>
         </div>
+        <div class="dropdown_menu">
+            <li><a href="hero">Home</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="services">Services</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="#" class="action_btn">Get Start</a></li>
+        </div>
     </header>
+
+    <main>
+        <section id="hero">
+            <h1>Welcome</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.<br>perferendis placeat alias fugit blanditiis, repellat temporibus harum possimus repellendus a accusantium vel eaque id voluptate similique atque pariatur adipisci ipsum?</p>
+        </section>
+    </main>
+
+    <script>
+        const togglebtn = document.querySelector('.toggle_btn')
+        const togglebtnicon = document.querySelector('.toggle_btn i')
+        const dropdownmenu = document.querySelector('.dropdown_menu')
+
+        togglebtn.onclick = function () {
+            dropdownmenu.classList.toggle('open')
+            // const isopen = dropdownmenu.classList.contains('open')
+
+            // togglebtnicon.classList = isopen
+            // ? 'fa-solid fa-xmark'
+            // : 'fa-solid fa-bars'
+        }
+    </script>
 </body>
 </html>
