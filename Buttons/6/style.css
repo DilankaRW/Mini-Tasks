@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: #100720; */
+}
+
+.btn{
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before{
+    content: "";
+    position: absolute;
+    top: -10px;
+    bottom: -10px;
+    left: -30px;
+    width: 10px;
+    rotate: 35deg;
+    background-color: #fff;
+}
+
+.btn:hover::before{
+    left: calc(100% + 30px);
+    transition: left 500ms;
+}
