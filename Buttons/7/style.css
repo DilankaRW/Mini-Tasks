@@ -1,0 +1,20 @@
+body{
+    background: black;
+}
+
+input{
+    appearance: none;
+    padding: 9px 25px;
+    background-color: #fff;
+    border-radius: 15em;
+    width: 100px;
+    text-align: center;
+}
+
+input::before{
+    content: "Open";
+}
+
+input:checked::before{
+    content: "Close";
+}
