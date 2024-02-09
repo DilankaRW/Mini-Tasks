@@ -1,0 +1,113 @@
+button{
+    outline: 0;
+    background: #5380F7;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 260px;
+    border: 0;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    padding: 16px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn i{
+    font-size: 1.2em;
+    border-radius: 100%;
+    animation: ripple 0.6s linear infinite;
+}
+
+@keyframes ripple{
+    0%{
+        box-shadow:
+        0 0 0 0 rgba(255, 255, 255, 0.1),
+        0 0 0 20px rgba(255, 255, 255, 0.1),
+        0 0 0 40px rgba(255, 255, 255, 0.1),
+        0 0 0 60px rgba(255, 255, 255, 0.1);
+    }
+    
+    100%{
+        box-shadow:
+        0 0 0 20px rgba(255, 255, 255, 0.1),
+        0 0 0 40px rgba(255, 255, 255, 0.1),
+        0 0 0 60px rgba(255, 255, 255, 0.1),
+        0 0 0 80px rgba(255, 255, 255, 0);
+    }
+}
+
+.dropdown{
+    position: absolute;
+    width: 100%;
+    background: #fff;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    transition: 0.3s ease;
+}
+
+.dropdown::before{
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    box-shadow: 2px -2px 6px #0000000d;
+    border-top: 6px solid #fff;
+    border-right: 6px solid #fff;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid transparent;
+    transform: rotate(-45deg);
+}
+
+li{
+    background: #fff;
+    color: #666;
+    padding: 0 20px;
+    margin: 0 4px;
+}
+
+li.active{
+    color: 5380F7;
+}
+
+a{
+    display: block;
+    border-bottom: 1px solid #0000000d;
+    padding: 16px 0;
+    color: inherit;
+    font-size: 10px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.dropdown{
+    opacity: 0;
+    visibility: hidden;
+}
+
+button:focus .dropdown,
+button:active .dropdown{
+    transform: translate(0, 10px);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* i img{
+    width: 20px;
+    height: 20px;
+} */
