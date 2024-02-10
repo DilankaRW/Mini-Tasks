@@ -86,4 +86,26 @@ section{
     color: #fff;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    padding-top: 30px;
+    align-items: center;
 }
+
+h2,
+p{
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+p{
+    font-size: 1.25rem;
+}
+
+#css { --bg: var(--sect-1); }
+#html { --bg: var(--sect-2); }
+#js { --bg: var(--sect-3); }
+#php { --bg: var(--sect-4); }
+#sql { --bg: var(--sect-5); }
