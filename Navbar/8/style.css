@@ -1,0 +1,89 @@
+:root{
+    --black: #373737;
+    --sect-1: #ff9900;
+    --sect-2: #2196F3;
+    --sect-3: #e63232;
+    --sect-4: #8BC34A;
+    --sect-5: #8946ff;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    transition: all 0.5s ease 0s;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+header{
+    width: 100%;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px;
+    background: linear-gradient(0deg, #fff0 0px, var(--black) 1px 100%);
+    display: flex;
+    text-align: center;
+    transition: all 0.5s ease 0s;
+}
+
+a{
+    width: 100%;
+    z-index: 1;
+    color: #fff;
+    text-decoration: none;
+    padding: 16px 10px;
+    position: relative;
+    font-size: 1.6rem;
+    border: 2px solid #000;
+    border-top-width: 0px;
+    border-bottom-width: 4px;
+}
+
+a:first-child{
+    border-left-width: 0;
+}
+
+a:last-child{
+    border-right-width: 0;
+}
+
+nav::after{
+    position: absolute;
+    content: "";
+    width: 20vw;
+    height: 100%;
+    background: linear-gradient(90deg,
+    var(--sect-1) 0 calc(20vw - 3px),
+    var(--sect-2) 0 calc(40vw - 3px),
+    var(--sect-3) 0 calc(60vw),
+    var(--sect-4) 0 calc(80vw),
+    var(--sect-5) 0 100vw);
+    bottom: 0;
+    left: 0;
+    animation: progress linear;
+    animation-timeline: scroll(root);
+    z-index: -1;
+}
+
+@keyframes progress{
+    100%{
+        width: 100%;
+    }
+}
+
+section{
+    --bg: var(--sect-1);
+    height: 100vh;
+    background-color: var(--bg);
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+}
