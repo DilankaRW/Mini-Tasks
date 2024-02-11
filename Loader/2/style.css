@@ -1,0 +1,110 @@
+body{
+    height: 100vh;
+    margin: 0;
+    background-color: #5c7084;
+    color: #f3f5f6;
+    background-image: radial-gradient(#fff4, #fff0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: .1.375;
+}
+
+.loader{
+    --speed: 1000ms;
+    position: relative;
+    font-size: 2.5em;
+}
+
+.tile{
+    width: 2.5em;
+    height: 2.5em;
+    transform-origin: 0 100%;
+    animation: var(--speed)  ease infinite jump;
+}
+
+.tile::before{
+    content: "";
+    display: block;
+    width: inherit;
+    height: inherit;
+    background-color: currentColor;
+    border-radius: 0.15em;
+    animation: var(--speed) ease-out infinite spin;
+}
+
+.loader::after{
+    content: "";
+    display: block;
+    width: 2.8em;
+    height: 0.3em;
+    background-color: #0132;
+    border-radius: 60%;
+    position: absolute;
+    left: -0.1em;
+    bottom: -01em;
+    filter: blur(0.02em);
+    animation: var(--speed) ease-in-out infinite shadow;
+    z-index: -1;
+}
+
+@keyframes jump{
+    0%{
+        transform: scaleY(1) translateY(0);
+    }
+    16%{
+        transform: scaleY(0.6) translateY(0);
+    }
+    22%{
+        transform: scaleY(1.2) translateY(-5);
+    }
+    24%,
+    62%{
+        transform: scaleY(1) translateY(-33%);
+    }
+    66%{
+        transform: scaleY(1.2) translateY(0);
+    }
+    72%{
+        transform: scaleY(0.8) translateY(0);
+    }
+    88%{
+        transform: scaleY(1) translateY(0);
+    }
+}
+
+@keyframes spin{
+    0%,
+    18%{
+        transform: rotateZ(0);
+        border-radius: 0.15em;
+    }
+    38%{
+        border-radius: 0.25em;
+    }
+    66%,
+    100%{
+        transform: rotateZ(1turn);
+        border-radius: 0.15em;
+    }
+}
+
+@keyframes shadow{
+    0%{
+        transform: scale(1);
+        filter: blur(0.02em);
+    }
+    25%,
+    60%{
+        transform: scale(0.8);
+        filter: blur(0.06em);
+    }
+    70%{
+        transform: scale(1.1);
+        filter: blur(0.02em);
+    }
+    90%{
+        transform: scale(1);
+        filter: blur(0.02em);
+    }
+}
