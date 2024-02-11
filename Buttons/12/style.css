@@ -1,0 +1,45 @@
+input{
+    display: inline-block;
+    border: 1px solid #0004;
+    border-radius: 100em;
+    font-size: 1rem;
+    position: relative;
+    padding: 0.5em 1em 0.5em 2em;
+    overflow: hidden;
+    margin: 0 5px;
+    appearance: none;
+}
+
+input::before{
+    content: "";
+    width: 0.75em;
+    display: inline-block;
+    aspect-ratio: 1;
+    background:
+    linear-gradient(currentcolor 0 0),
+    linear-gradient(currentcolor 0 0);
+    background-color: var(--color);
+    background-position: 50% 50%, 50% 50%, 50% 50%;
+    background-size: 0 0, 0 0;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 1.125em;
+    translate: -50% -50%;
+    rotate: 45deg;
+    transition: width 0.25s, background-size 0.5s;
+}
+
+input::after{
+    position: relative;
+    content: attr(value);
+    white-space: pre;
+    line-height: 1;
+}
+
+input:checked::before{
+    width: 200%;
+    background-position: 50% 50%, 50% 50%, 50% 50%;
+    background-size: 1em 0.125em, 0.125em 1em;
+}
