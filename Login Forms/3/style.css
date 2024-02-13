@@ -25,3 +25,40 @@ h1{
     margin-bottom: 20px;
     text-transform: uppercase;
 }
+
+label{
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgb(100, 100, 100);
+}
+
+input{
+    width: 200px;
+    border: none;
+    border-bottom: 2px solid #333;
+    padding: 10px 0px;
+    outline: none;
+}
+
+input:focus{
+    border-bottom: 2px solid #e0c445;
+}
+
+button{
+    margin-top: 20px;
+    width: 150px;
+    border: none;
+    background: #333;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding: 10px;
+    box-shadow: 2px 2px 0px #e0c445;
+}
+
+button:hover{
+    background: #e0c445;
+    color: #333;
+}
