@@ -57,3 +57,24 @@ li{
     0 0 45px var(--c),
     0 0 60px var(--c);
 }
+
+li:nth-child(1).active~.marker::before{
+    --c: #5da6ff;
+}
+
+li:nth-child(2).active~.marker::before{
+    --c: #ff0;
+}
+
+li:nth-child(3).active~.marker::before{
+    --c: #0f0;
+}
+
+li:nth-child(4).active~.marker::before{
+    --c: #df2fff;
+}
+
+li:nth-child(5).active~.marker::before{
+    --c: #ff308f;
+}
+
