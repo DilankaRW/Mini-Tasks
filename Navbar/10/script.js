@@ -3,18 +3,19 @@ const $marker = document
 const $list = document
     .querySelectorAll('ul li');
 
-$list.forEach(($li) =>{
-    $list.addEventListener{
+$list.forEach(($li) => {
+    $li.addEventListener(
         'mousemove',
         (event) => {
-            $marker.style.left = $li.offsetLeft + 'px';
-            $marker.style.width = $li.offsetWidth + 'px';
+            $marker.style.left =
+            $li.offsetLeft + 'px';
+            $marker.style.width =
+            $li.offsetWidth + 'px';
             document
-                .querySelector('.active')?
+                .querySelector('.active')
                 .classList
                 .remove('active');
                 $li.classList.add('active');
-
         },
-    };
+    );
 });
