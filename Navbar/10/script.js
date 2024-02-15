@@ -7,10 +7,8 @@ $list.forEach(($li) => {
     $li.addEventListener(
         'mousemove',
         (event) => {
-            $marker.style.left =
-            $li.offsetLeft + 'px';
-            $marker.style.width =
-            $li.offsetWidth + 'px';
+            $marker.style.left = $li.offsetLeft + 'px';
+            $marker.style.width = $li.offsetWidth + 'px';
             document
                 .querySelector('.active')
                 .classList
