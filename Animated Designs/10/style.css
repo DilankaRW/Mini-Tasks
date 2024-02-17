@@ -1,3 +1,7 @@
+body{
+    background-color: #1e293b;
+}
+
 .tag-list{
     width: 30rem;
     font-family: 'Courier New', Courier, monospace;
@@ -39,4 +43,13 @@
     transparent 70%, #1e293b);
     inset: 0;
     pointer-events: none;
+}
+
+@keyframes loop{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
 }
