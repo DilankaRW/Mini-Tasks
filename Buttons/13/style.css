@@ -1,0 +1,36 @@
+.chkbx{
+    position: relative;
+    cursor: pointer;
+
+    .x{
+        display: block;
+        width: 180px;
+        height: 80px;
+        border: 2px solid #252525;
+        border-radius: 60px;
+        transition: .5s;
+
+        &:before{
+            content: "";
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            top: 7px;
+            left: 7px;
+            box-sizing: border-box;
+            background: #252525;
+            border-radius: 40px;
+            transition: .5s;
+        }
+    }
+
+    :checked ~ .x::before{
+        background: #ee9828;
+        border-color: #ee9828;
+        transform: translateX(100px);
+    }
+
+    :checked ~ .x{
+        border-color: #ee9828;
+    }
+}
