@@ -34,3 +34,18 @@
     cursor: pointer;
 }
 
+.dropdown-title:hover, .dropdown-content a:hover{
+    background-color: var(--hover-background-color);
+}
+
+.dropdown-title:hover + .dropdown-content, .dropdown-content:hover{
+    transform: scaleY(1);
+}
+
+.dropdown-content{
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.35s ease;
+    transform-origin: top;
+    transform: scaleY(0);
+}
