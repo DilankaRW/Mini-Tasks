@@ -7,3 +7,30 @@
     --title-content-space: 4px;
 }
 
+.dropdown{
+    text-align: center;
+}
+
+.dropdown-title{
+    position: relative;
+    margin-bottom: var(--title-content-space);
+}
+
+.dropdown-title::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: var(--title-content-space);
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+}
+
+.dropdown-title, .dropdown-content{
+    padding: var(--padding);
+    border-radius: var(--border-radius);
+    background-color: var(--background-color);
+    color: var(--color);
+    cursor: pointer;
+}
+
