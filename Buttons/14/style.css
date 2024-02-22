@@ -49,3 +49,9 @@
     transform-origin: top;
     transform: scaleY(0);
 }
+
+.dropdown-content a{
+    padding: var(--padding);
+    color: var(--color);
+    border-radius: var(--border-radius);
+}
