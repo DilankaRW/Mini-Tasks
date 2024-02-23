@@ -48,3 +48,24 @@ ul li a div::before{
     transform: rotateX('90deg') translateY(8vw);
     transform-origin: bottom;
 }
+
+ul li a div:hover:before{
+    transform: rotateX(0deg) translateY(0vm);
+}
+
+ul li a div::after{
+    content: attr(title);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    color: #171810;
+    padding: 3vw;
+    transition: .3s;
+    transform: rotateX(0deg) translateY(0vw);
+    transform-origin: top;
+}
+
+ul li a div:hover::after{
+    transform: rotateX(90deg) translateY(-2vw);
+}
