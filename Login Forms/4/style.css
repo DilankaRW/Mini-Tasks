@@ -34,3 +34,22 @@ body{
     left: -60px;
 }
 
+.form{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background: #ffffff1a;
+    border-top: 1px solid #ffffff80;
+    border-left: 1px solid #ffffff4d;
+    border-right: 1px solid #ffffff4d;
+    border-bottom: 1px solid #ffffff33;
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 26px 42px rgba(0, 0, 0, 0.1);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
