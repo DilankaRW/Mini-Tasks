@@ -21,3 +21,10 @@ body{
     background: black;
     border-radius: 50%;
 }
+
+.circle1{
+    background-color: #12c2e9;
+    right: -60px;
+    top: -60px;
+}
+
