@@ -9,3 +9,15 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+.wrapper{
+    position: relative;
+}
+
+.circle{
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    background: black;
+    border-radius: 50%;
+}
