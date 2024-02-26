@@ -62,3 +62,17 @@ h1{
     font-family: 'Courier New', Courier, monospace;
     letter-spacing: 2px;
 }
+input,
+button{
+    width: 100%;
+    font-size: 16px;
+    display: block;
+    box-sizing: border-box;
+    margin: 20px auto;
+    padding: 12px 20px;
+    border: none;
+    background: #ffffff1a;
+    border-radius: 12px;
+    border-top: 1px solid #ffff;
+    box-sizing: 0 13px 21px #0000000d;
+}
