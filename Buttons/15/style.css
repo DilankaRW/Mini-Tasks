@@ -1,0 +1,58 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+}
+
+form{
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+    position: absolute;
+    overflow: hidden;
+    inset: 0;
+}
+
+input{
+   position: absolute; 
+}
+
+input:focus~.keys{
+    opacity: 0.8;
+}
+
+input:nth-of-type(1):checked~label:nth-of-type(1),
+input:nth-of-type(2):checked~label:nth-of-type(2),
+input:nth-of-type(3):checked~label:nth-of-type(3),
+input:nth-of-type(4):checked~label:nth-of-type(4){
+    z-index: 0;
+}
+
+input:nth-of-type(1):checked~label{
+    transform: translate3d(0, 0, 0);
+}
+
+input:nth-of-type(2):checked~label{
+    transform: translate3d(-100%, 0, 0);
+}
+
+input:nth-of-type(3):checked~label{
+    transform: translate3d(-200%, 0, 0);
+}
+
+input:nth-of-type(4):checked~label{
+    transform: translate3d(-300%, 0, 0);
+}
+
+label{
+    display: inline-block;
+    width: 100vw;
+    height: 100vh;
+    font-size: 3rem;
+    background: #444;
+    color: #fff;
+    line-height: 100vh;
+    min-height: 100%;
+    text-align: center;
+    
+}
