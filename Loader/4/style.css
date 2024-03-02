@@ -39,28 +39,28 @@ body{
 }
 
 .bar{
-    &:nth-child(1), &:nth-child(10){
-        --bg: purple;
+    &:nth-child(1){
+        --bg: #ffffff;
         --delay: 1s;
     }
 
-    &:nth-child(2), &:nth-child(9){
-        --bg: crimson;
+    &:nth-child(2){
+        --bg: #ffb5b5;
         --delay: 0.8s;
     }
 
-    &:nth-child(3), &:nth-child(8){
-        --bg: deeppink;
+    &:nth-child(3){
+        --bg: #ff7171;
         --delay: 0.6s;
     }
 
-    &:nth-child(4), &:nth-child(7){
-        --bg: orange;
+    &:nth-child(4){
+        --bg: #ff4444;
         --delay: 0.4s;
     }
 
-    &:nth-child(5), &:nth-child(6){
-        --bg: gold;
+    &:nth-child(5){
+        --bg: #ff0000;
         --delay: 0.2s;
     }
 }
