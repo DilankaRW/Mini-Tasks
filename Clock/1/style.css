@@ -6,5 +6,5 @@
 }
 
 .day:before{
-    
+    content: var(--timer-day);
 }
