@@ -1,0 +1,10 @@
+:root{
+    --timer-day: 'Sun';
+    --timer-hours: '00';
+    --timer-minutes: '00';
+    --timer-seconds: '00';
+}
+
+.day:before{
+    
+}
