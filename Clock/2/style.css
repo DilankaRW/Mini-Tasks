@@ -22,3 +22,28 @@ h1{
     animation: shake 2.5s normal infinite;
 }
 
+@keyframes shake{
+    5%,
+    15%,
+    25%,
+    35%,
+    55%,
+    65%,
+    75%,
+    95%{
+        filter: blur(0.018em);
+        transform: translateY(0.018em) rotate(0deg);
+    }
+
+    10%,
+    20%,
+    30%,
+    40%,
+    50%,
+    70%,
+    80%,
+    90%{
+        filter: blur(0.01em);
+        transform: translateY(-0.018em) rotate(0deg);
+    }
+}
