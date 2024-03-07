@@ -1,0 +1,24 @@
+body{
+    height: 100vh;
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 6em;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-shadow: 0 0 0.15 #1da9cc;
+    user-select: none;
+    white-space: nowrap;
+    filter: blur(0.007em);
+    position: relative;
+    animation: shake 2.5s normal infinite;
+}
+
