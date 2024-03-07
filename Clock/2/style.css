@@ -46,4 +46,47 @@ h1{
         filter: blur(0.01em);
         transform: translateY(-0.018em) rotate(0deg);
     }
+
+    20%,
+    60%{
+        filter: blur(0.03em);
+        transform: translate(-0.018em, 0.018em) rotate(0deg);
+    }
+
+    45%,
+    85%{
+        filter: blur(0.03em);
+        transform: translate(0.018em, -0.018em) rotate(0deg);
+    }
+
+    100%{
+        filter: blur(0.007em);
+        transform: translate(0) rotate(-0.5deg);
+    }
+}
+
+span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(10% 0%, 44% 0%, 70% 100%, 55% 100%);
+}
+
+h1::before,
+h1::after{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+h1::before{
+    transform: translate(-51%, -48%);
+    clip-path: polygon(0% 0%, 10% 0%, 55% 100%, 0% 100%);
+}
+
+h1::after{
+    transform: translate(-49%, -53%);
+    clip-path: polygon(44% 0%, 100% 0%, 100% 100%, 70% 100%);
 }
