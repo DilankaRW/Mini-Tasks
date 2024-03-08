@@ -1,0 +1,10 @@
+body{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    background: linear-gradient(to bottom right, #114357 60%, #f29492);
+    line-height: 1.6;
+}
