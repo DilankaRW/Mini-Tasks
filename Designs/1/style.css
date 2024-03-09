@@ -8,3 +8,84 @@ body{
     background: linear-gradient(to bottom right, #114357 60%, #f29492);
     line-height: 1.6;
 }
+
+.container{
+    width: 60vw;
+    box-shadow: 10px 10px 5px 0px #000000bf;
+}
+
+.collapse{
+    background: #fff;
+}
+
+a{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 15px 25px;
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+}
+
+a.facebook{
+    background: #008cff;
+}
+
+a.instagram{
+    background: #e645dd;
+}
+
+a.linkedin{
+    background: #1dabdd;
+}
+
+a.x{
+    background: #000000;
+}
+
+a::before{
+    content: "";
+    position: absolute;
+    right: 25px;
+    border-top: 10px solid #fff;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+
+img{
+    height: 30px;
+    padding-top: 10px;
+}
+
+.inner-content{
+    font-size: 18px;
+    padding: 1.8rem;
+    color: #000000;
+}
+
+.content{
+    max-height: 0em;
+    transition: 0.3s linear 0s;
+    overflow: hidden;
+}
+
+.collapse+.collapse a{
+    border-top: 1px solid #ffffffb3;
+}
+
+h3{
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.collapse:target .content{
+    max-height: 15em;
+}
+
+.collapse:target a::before{
+    transform: rotate(-90deg);
+}
