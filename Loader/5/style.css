@@ -1,0 +1,27 @@
+.loader{
+    width: 48px;
+    height: 48px;
+    border: 2px solid #FFF;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+}
+
+.loader::after,
+.loader::before{
+    content: '';
+    box-sizing: border-box;
+    border: 2px solid #FF3D00;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 38px;
+    height: 38px;
+    animation: rotationBack 1.5s linear infinite;
+    transform-origin: center center;
+}
+
