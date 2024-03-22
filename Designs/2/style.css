@@ -1,0 +1,30 @@
+body{
+    display: grid;
+    place-items: center;
+    margin: 0;
+    height: 100vh;
+    background: #221d2d;
+    color: #fdfcfd;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    width: 75vw;
+    max-width: 650px;
+    padding: 50px 30px 50px 20px;
+    background: #121017;
+    border-radius: 24px;
+}
+
+.card img{
+    max-width: 280px;
+    width: 35vw;
+    height: 300px;
+    object-fit: cover;
+    margin-left: -60px;
+    margin-right: 30px;
+    border-radius: inherit;
+    box-shadow: 0 60px 40px rgb(0 0 0 / 0%);
+}
