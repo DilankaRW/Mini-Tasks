@@ -11,8 +11,8 @@ fetch('https://api.coindesk.com/v1/bpi/currentprice.json')
     parseCurrency('USD');
 });
 
-function parseCurrency(currentprice){
-    $symbol.innerHTML = cache[currency].$symbol;
+function parseCurrency(currency){
+    $symbol.innerHTML = cache[currency].symbol;
     $price.innerHTML = cache[currency].rate.split('.')[0];
 }
 
