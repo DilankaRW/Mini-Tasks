@@ -48,6 +48,7 @@ body{
     overflow: hidden;
     white-space: nowrap;
     scroll-behavior: smooth;
+    border-radius: 25px;
 }
 
 .carousel.dragging{
