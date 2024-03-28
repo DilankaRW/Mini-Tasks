@@ -1,8 +1,13 @@
 const carousel = document.querySelector(".carousel");
 const arrowBtns = document.querySelectorAll(".wrapper i");
 const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+const carouselChildrens = [...carousel.children];
 
 let isDragging = false, startX, startScrollLeft;
+
+let carPerView =Math.round(carousel.offsetWidth / firstCardWidth);
+
+carouselChildrens.slice()
 
 // Add event listeners for the arrow buttons to scroll the carousel left and right
 arrowBtns.forEach(btn => {
