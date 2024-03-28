@@ -65,6 +65,10 @@ body{
     flex-direction: column;
 }
 
+.carousel.no-transition{
+    scroll-behavior: auto;
+}
+
 .carousel.dragging{
     scroll-snap-type: none;
     scroll-behavior: auto;
