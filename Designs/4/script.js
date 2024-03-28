@@ -1,75 +1,35 @@
-const carousel = document.querySelector(".carousel"),
-firstImg = carousel.querySelectorAll("img")[0];
-arrowIcons = document.querySelectorAll(".wrapper i");
+const carousel = document.querySelector(".carousel");
+const arrowBtns = document.querySelectorAll(".wrapper i");
+const firstCardWidth = carousel.querySelector(".card").offsetWidth;
 
-let isDragStart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
+let isDragging = false, startX, startScrollLeft;
 
-const showHideIcons = () => {
-    // showing and hiding prev/next icon according to carousel scroll left value
-    let scrollWidth = carousel.scrollWidth - carousel.clientWidth; // getting max scrollable width
-    arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
-    arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
-}
-
-arrowIcons.forEach(icon => {
-    icon.addEventListener("click", () => {
-        let firstImgWidth = firstImg.clientWidth + 14; //getting first img width & adding 14 margin value
-        // if clicked icon is left, reduce width value from the carousel scroll left else and to it
-        carousel.scrollLeft += icon.id == "left" ? -firstImgWidth : firstImgWidth;
-        setTimeout(() => showHideIcons(), 60); // calling showHideIcons after 60ms
-    });
+// Add event listeners for the arrow buttons to scroll the carousel left and right
+arrowBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        carousel.scrollLeft += btn.id === "left" ? -firstCardWidth : firstCardWidth;
+    })
 });
 
-const autoSlide = () => {
-    // if there is no image left to scroll then return from here
-    if(carousel.scrollLeft == (carousel.scrollWidth - carousel.clientWidth)) return;
-
-    positionDiff = Math.abs(positionDiff); // making positionDiff value to positive
-    let firstImgWidth = firstImg.clientWidth + 14;
-    // getting difference value that needs to add or reduce from carousel left to take middle img center
-    let valDifference = firstImgWidth - positionDiff;
-
-    if (carousel.scrollLeft > prevScrollLeft) {
-        // if user is scrolling to the right
-        return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-    }
-    // if user is scrolling to the left
-    carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
-}
-
 const dragStart = (e) => {
-    //updating globle variables value on mouse down ewent
-    isDragStart = true;
-    prevPageX = e.pageX || e.touches[0].pageX;
-    prevScrollLeft = carousel.scrollLeft;
-}
-
-const dragging = (e) =>{
-    //scrolling images/carousel to left according to mouse pointer
-    if (!isDragStart) return;
-    e.preventDefault();
     isDragging = true;
     carousel.classList.add("dragging");
-    positionDiff = (e.pageX || e.touches[0].pageX ) - prevPageX;
-    carousel.scrollLeft = prevScrollLeft - positionDiff;
-    showHideIcons();
+    //Records the initial cursor and scroll position of the carousel
+    startX = e.pageX;
+    startScrollLeft = carousel.scrollLeft;
 }
 
-const dragStop = () =>{
-    isDragStart = false;
-    carousel.classList.remove("dragging");
+const dragging =(e) => {
+    if (!isDragging) return; //if isDragging is false return from here
+    //Updates the scroll position of the carousel based on the cursor movement
+    carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+}
 
-    if(!isDragging) return;
+const dragStop = () => {
     isDragging = false;
-    autoSlide();
+    carousel.classList.remove("dragging");
 }
 
 carousel.addEventListener("mousedown", dragStart);
-carousel.addEventListener("touchstart", dragStart);
-
 carousel.addEventListener("mousemove", dragging);
-carousel.addEventListener("touchmove", dragging);
-
-carousel.addEventListener("mouseup", dragStop);
-carousel.addEventListener("mouseleave", dragStop);
-carousel.addEventListener("touchend", dragStop);
+document.addEventListener("mouseup", dragStop);
