@@ -40,4 +40,7 @@ mark, h1{
     oklch(0.86 0.19 84.89 / 1) 50%,
     oklch(0.86 0.19 84.89 / 0) 50%);
     background-position: 100%;
+    background-size: 200% 100%;
+    border-radius: 0.2rem;
+    padding-inline: 0.2rem;
 }
