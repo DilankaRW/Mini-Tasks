@@ -1,0 +1,43 @@
+html{
+    color: oklch(0.2 0.19 84.89 / 1);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    line-height: 1.45;
+}
+
+body{
+    margin: 0;
+}
+
+article{
+    display: grid;
+    min-height: 100svh;
+    place-items: center;
+    width: 100%;
+}
+
+.content{
+    padding-block: 2rem 30svh;
+    width: 90vw;
+}
+
+h1{
+    margin: 0;
+    line-height: 1.1;
+    display: inline;
+}
+
+@keyframes highlight{
+    to{
+        background-position: 0;
+    }
+}
+
+mark, h1{
+    animation: highlight linear forwards;
+    animation-timeline: view(40% 40%);
+    background: linear-gradient(to right,
+    oklch(0.86 0.19 84.89 / 1) 50%,
+    oklch(0.86 0.19 84.89 / 0) 50%);
+    background-position: 100%;
+}
