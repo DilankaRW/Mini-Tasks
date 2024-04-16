@@ -1,0 +1,95 @@
+:root {
+    --primary-color: #00ff00;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background: #222;
+}
+
+.loader{
+    gap: 20px;
+    display: flex;
+    position: relative;
+}
+
+span{
+    position: relative;
+    width: 10px;
+    height: 30px;
+}
+
+span::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    inset: 0;
+    background: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color),
+    0 0 15px var(--primary-color),
+    0 0 30px var(--primary-color),
+    0 0 50px var(--primary-color);
+    animation: anim 6s linear infinite;
+    animation-delay: calc(var(--i) * 0.1s);
+}
+
+@keyframes anim{
+    0%{
+        background: var(--primary-color);
+        box-shadow: 
+        0 0 5px var(--primary-color),
+        0 0 15px var(--primary-color),
+        0 0 30px var(--primary-color),
+        0 0 50px var(--primary-color);
+        rotate: 0deg;
+    }
+
+    20%{
+        background: var(--primary-color);
+        box-shadow: 
+        0 0 5px var(--primary-color),
+        0 0 15px var(--primary-color),
+        0 0 30px var(--primary-color),
+        0 0 50px var(--primary-color);
+        rotate: 0deg;
+    }
+
+    40%{
+        background: var(--primary-color);
+        box-shadow: 
+        0 0 5px var(--primary-color),
+        0 0 15px var(--primary-color),
+        0 0 30px var(--primary-color),
+        0 0 50px var(--primary-color);
+        rotate: 90deg;
+        transform-origin: bottom;
+        filter: hue-rotate(0deg);
+    }
+
+    80%{
+        background: var(--primary-color);
+        box-shadow: 
+        0 0 5px var(--primary-color),
+        0 0 15px var(--primary-color),
+        0 0 30px var(--primary-color),
+        0 0 50px var(--primary-color);
+        rotate: 90deg;
+        transform-origin: bottom;
+        filter: hue-rotate(360deg);
+    }
+
+    90%{
+        background: #000;
+        box-shadow: none;
+        rotate: 0deg;
+    }
+
+    90.1%, 100%{
+        box-shadow: #000;
+        box-shadow: none;
+    }
+}
