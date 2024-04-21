@@ -63,3 +63,24 @@ body{
     --pos-4: bottom, bottom 10px left 0, bottom 3px left 0, bottom 0 left 50%;
 }
 
+@keyframes anim-{
+    25%{
+        background-position: var(--pos-0);
+        left: 0
+    }
+
+    25.1%{
+        background-position: var(--pos-1);
+        left: 0
+    }
+
+    50%{
+        background-position: var(--pos-2);
+        left: calc(100% - 22px);
+    }
+
+    75%{
+        background-position: var(--pos-3);
+        left: calc(100% - 22px);
+    }
+}
