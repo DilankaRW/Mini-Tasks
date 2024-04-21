@@ -40,3 +40,26 @@ body{
     background-repeat: no-repeat;
     animation: anim-1 2s infinite;
 }
+
+@keyframes anim-0{
+    0%, 25%{
+        background-size: 50% 100%;
+    }
+
+    25.1%, 75%{
+        background-size: 0 0, 50% 100%;
+    }
+
+    75.1%, 100%{
+        background-size: 0 0, 0 0;
+    }
+}
+
+.loader::after{
+    --pos-0: bottom, bottom 54px left 0, bottom 3px left 0, bottom 0 left 50%;
+    --pos-1: bottom, bottom 10px left 0, bottom 3px left 0, bottom 0 left 50%;
+    --pos-2: bottom, bottom 10px left 0, bottom 3px left 0, bottom 0 left 50%;
+    --pos-3: bottom, bottom 54px left 0, bottom 3px left 0, bottom 0 left 50%;
+    --pos-4: bottom, bottom 10px left 0, bottom 3px left 0, bottom 0 left 50%;
+}
+
