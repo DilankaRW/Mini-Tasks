@@ -83,4 +83,9 @@ body{
         background-position: var(--pos-3);
         left: calc(100% - 22px);
     }
+
+    75.1%{
+        background-position: var(--pos-4);
+        left: calc(100% -22px)
+    }
 }
