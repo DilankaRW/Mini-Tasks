@@ -1,0 +1,42 @@
+.loader::before{
+    content: "Loading...";
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader{
+    position: relative;
+    width: fit-content;
+    font-size: 20px;
+    font-family: monospace;
+    line-height: 1.4;
+    font-weight: bold;
+    border-right: 5px solid #000;
+    border-left: 5px solid #000;
+    background: linear-gradient(#000 0 0) left,
+    linear-gradient(#000 0 0) right;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    animation: anim-0 2s infinite;
+}
+
+.loader::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 22px;
+    height: 60px;
+    background:
+    linear-gradient(90deg, #000 4px, #000 0 calc(100% - 4px), #000 0) bottom /22px 20px,
+    linear-gradient(90deg, red 4px, #000 0 calc(100% - 4px), red 0) bottom 10px left 0/22px 6px,
+    linear-gradient(#000 0 0) bottom 3px left 0 /22px 8px,
+    linear-gradient(#000 0 0) bottom 0 left 50%/8px 16px;
+    background-repeat: no-repeat;
+    animation: anim-1 2s infinite;
+}
