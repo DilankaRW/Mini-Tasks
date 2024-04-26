@@ -1,131 +1,206 @@
 *{
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins',sans-serif;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 body{
     min-height: 100vh;
-    background-image: linear-gradient(to left, rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(image.png);
-    background-size: cover;
-    background-position: center;
-}
-
-.header{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 1.3rem 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-
-.header::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255,255,255,0.15);
-    /* backdrop-filter: blur(50px); */
-    z-index: -1;
-}
-
-span{
-    color: orange;
-}
-
-.name{
-    font-size: 2rem;
-    color: white;
-    text-decoration: none;
-    font-weight: 520;
-}
-
-.navbar a{
-    font-size: 1.5rem;
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 2.5rem;
-    transition: .50s ease;
-}
-
-.navbar a:hover{
-    color: orange;
-    padding-right: 10px;
-}
-
-#check{
-    display: none;
-}
-
-.menu{
-    position: absolute;
-    right: 5%;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-    display: none;
-}
-
-/* Responsive */
-@media (max-width: 992px){
-    .header{
-        padding: 1.3rem 5%;
-    }
-}
-
-@media (max-width: 760px){
-    .menu{
-        display: inline-flex;
-    }
-
-
-    #check:checked~.menu #icon-menu{
-        display: none;
-    }
-
-    #check:checked~.navbar a{
-        transform: translateY(0);
-    }
-}
-
-
-.menu #close-menu{
-    display: none;
-}
-
-#check:checked~.menu #close-menu{
-    display: block;
-}
-
-.navbar{
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 0;
-    background: rgba(255,255,255,0.15);
-    /* backdrop-filter: blur(50px); */
+    min-width: 400px;
     overflow: hidden;
-    transition: .2s ease;
 }
 
-#check:checked~.navbar{
-    height: 17.7rem;
+header{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 80px;
+    padding: 0 5%;
+    color: #311822;
+    font-size: 18px;
 }
 
-.navbar a{
-    display: block;
+header .logo{
+    color: #311822;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: auto;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+}
+
+header nav .menu{
+    display: flex;
+    align-items: center;
+}
+
+header nav .menu li a{
+    position: relative;
+    color: #311822;
     font-size: 1rem;
-    margin: 1.5rem 0;
+    font-weight: 600;
+    margin-left: 40px;
+    border-radius: 0.4rem;
+    transition: color 0.4s ease;
+}
+
+header nav .menu li a:hover{
+    color: #fff;
+}
+
+header nav #toggle{
+    font-size: 1.3rem;
+    margin-left: 80px;
+    cursor: pointer;
+}
+
+.home{
+    padding: 0 5%;
+    color: #311822;
     text-align: center;
-    transform: translateY(-50px);
-    transition: .2ease;
+}
+
+.home h1{
+    color: #311822;
+    text-transform: uppercase;
+    font-size: 6rem;
+    font-weight: 700;
+    letter-spacing: 10px;
+}
+
+.home h2{
+    color: #311822;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: -25px;
+}
+
+.home .images .bg,
+.home .images .img-1,
+.home .images .img-2,
+.home .images .img-3,
+.home .images .img-4,
+.home .images .img-5,
+.home .images .img-6,
+.home .images .img-7,
+.home .images .img-8{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+}
+
+.home .images .bg{
+    background: url(images/sky.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.home .images .img-1{
+    background: url(images/hill1.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.home .images .img-2{
+    background: url(images/hill2.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.home .images .img-3{
+    background: url(images/hill3.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.home .images .img-4{
+    background: url(images/hill4.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.home .images .img-5{
+    background: url(images/hill5.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.home .images .img-6{
+    background: url(images/leaf.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.home .images .img-7{
+    background: url(images/plant.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.home .images .img-8{
+    background: url(images/tree.png);
+    background-position: center;
+    background-size: cover;
+}
+
+@media (max-width:800px){
+    .home{
+        min-width: 390px;
+    }
+    .home h1{
+        margin-top: 5px;
+        font-size: 4rem;
+        font-weight: 700;
+    }
+    .home h2{
+        margin-top: 10px;
+    }
+
+    header nav .menu{
+        flex-direction: column;
+        row-gap: 2rem;
+        position: absolute;
+        left: -100%;
+        top: 80px;
+        width: 100%;
+        padding-top: 110px;
+        background: #311822;
+        height: calc(100vh - 80px);
+        z-index: 10;
+        transition: left 0.4s ease;
+    }
+
+    header nav .menu.active{
+        left: 0;
+    }
+
+    header nav .menu li a{
+        margin-left: unset;
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #f3de88;
+        width: 250px;
+        height: 60px;
+        line-height: 60px;
+        display: block;
+        text-align: center;
+        border-radius: 5px;
+        transition: 0.25s ease;
+    }
+    header nav .menu li a:hover{
+        background: #f3de88;
+        color: #311822;
+    }
 }

@@ -4,23 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Navbar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+    <title>Document</title>
 </head>
 <body>
-    <header class="header">
-        <a href="#" class="name">Ree<span>Okey</span></a>
-        <input type="checkbox" id="check" placeholder="Test">
-        <label for="check" class="menu">
-            <i class="bx bx-menu" id="icon-menu"></i>
-            <i class="bx bx-x" id="icon-menu"></i>
-        </label>
-        <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Skills</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+    <header>
+        <div class="logo">LOGO</div>
+        <nav>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <i class="fa-solid fa-bars" id="toggle"></i>
         </nav>
     </header>
+    <section class="home">
+        <div class="home-content">
+            <h2>Welcome to</h2>
+            <h1>Sri Lanka</h1>
+        </div>
+        <div class="images">
+            <div class="bg"></div>
+            <div class="img-1"></div>
+            <div class="img-2"></div>
+            <div class="img-3"></div>
+            <div class="img-4"></div>
+            <div class="img-5"></div>
+            <div class="img-6"></div>
+            <div class="img-8"></div>
+            <div class="img-7"></div>
+        </div>
+    </section>
+    <script>
+        gsap.from('.img-1', 1.2, {opacity:0, y:-150, delay: 0.5})
+        gsap.from('.img-2', 1.2, {opacity:0, y:-150, delay: 0.5})
+        gsap.from('.img-3', 1.2, {opacity:0, y:150, delay: 0.5})
+        gsap.from('.img-4', 1.2, {opacity:0, y:350, delay: 1.9})
+        gsap.from('.img-5', 1.2, {opacity:0, y:200, delay: 3.3})
+        gsap.from('.img-6', 1.2, {opacity:0, y:-150, delay: 2.6})
+        gsap.from('.img-7', 1.2, {opacity:0, y:150, delay: 4})
+        gsap.from('h1', 1.2, {opacity:0, y:-150, delay: 4.2})
+        gsap.from('h2', 1.2, {opacity:0, y:-150, delay: 4.5})
+        gsap.from('.img-8', 1.2, {opacity:0, y:-80, delay: 4.5})
+
+        const menu = document.querySelector('.menu');
+        const toggle = document.getElementById('toggle');
+
+        toggle.onclick = function () {
+            menu.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
