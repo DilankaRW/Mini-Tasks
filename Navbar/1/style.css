@@ -101,7 +101,7 @@ header nav #toggle{
 }
 
 .home .images .bg{
-    background: url(images/sky.jpg);
+    background: url(images/sky.png);
     background-position: center;
     background-size: cover;
 }
