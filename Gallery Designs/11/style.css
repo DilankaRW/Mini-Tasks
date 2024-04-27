@@ -1,0 +1,65 @@
+.container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.thumbex{
+    width: 250px;
+    height: 300px;
+    flex: 1;
+    overflow: hidden;
+    outline: 2px solid white;
+    outline-offset: -15px;
+    background-color: blue;
+    box-shadow: 5px 10px 40px 5px #00000080;
+}
+
+.thumbnail{
+    overflow: hidden;
+    min-width: 250px;
+    height: 300px;
+    position: relative;
+    opacity: 0.8;
+    backface-visibility: hidden;
+    transition: all 0.4s ease-out;
+}
+
+img{
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    top: 50%;
+    height: 115%;
+    width: auto;
+    transform: translate(-50%, -50%);
+    backface-visibility: hidden;
+}
+
+span{
+    position: absolute;
+    z-index: 2;
+    top: calc(150px - 20px);
+    left: 0;
+    right: 0;
+    background: #000000b3;
+    color: white;
+    font-size: 24px;
+    font-weight: 300;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px;
+    margin: 0 45px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    transition: all 0.3s ease-out;
+}
+
+.thumbnail:hover{
+    backface-visibility: hidden;
+    transform: scale(1.15, 1.15);
+    opacity: 1;
+}
+
+.thumbnail:hover span{
+    opacity: 0;
+}
