@@ -1,0 +1,71 @@
+.body{
+    background-color: #02070d;
+    color: #ffffff;
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    width: 320px;
+    position: relative;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.clock{
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff0f;
+    backdrop-filter: blur(15px);
+    padding: 50px 25px;
+    box-shadow: 0 25px 23px #00000026;
+    border: 1.5px solid #ffffff0f;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.shape1{
+    height: 150px;
+    width: 150px;
+    background: linear-gradient(135deg, red, orange);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 130px;
+    right: -50px;
+    z-index: -1;
+}
+
+.shape2{
+    height: 150px;
+    width: 150px;
+    background: linear-gradient(135deg, rgb(0, 68, 255), rgb(11, 239, 255));
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    left: -50px;
+    z-index: -1;
+}
+
+.wrapper{
+    text-align: center;
+}
+
+.day{
+    position: relative;
+    font-size: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #c5c5c5;
+    text-align: center;
+}
+
+.time{
+    display: inline-block;
+    font-size: 40px
+}
+
+.midday{
+    display: inline-block;
+    font-size: 30px;
+}
