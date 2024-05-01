@@ -8,6 +8,14 @@
     src: url("fonts/Hack-Bold.ttf");
 } */
 
+body{
+    background-color: #02070d;
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+}
+
 .digital-clock{
     background-color: #000;
     color: #fff;
@@ -16,6 +24,7 @@
     user-select: none;
     padding: 0 2rem;
     border: 0.5rem solid #2d2d2d;
+    width: 530px;
 }
 
 .week{
@@ -46,4 +55,8 @@
 
 .min{
     display: math;
+}
+
+.invsible{
+    visibility: hidden;
 }
