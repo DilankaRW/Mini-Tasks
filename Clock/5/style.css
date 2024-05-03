@@ -13,3 +13,9 @@ body{
     letter-spacing: 0.1em;
     font-family: 24px;
 }
+
+.time{
+    letter-spacing: 0.05em;
+    font-size: 80px;
+    padding: 5px 0;
+}
