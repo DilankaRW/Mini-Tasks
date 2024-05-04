@@ -1,0 +1,53 @@
+body{
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background: #222;
+}
+
+.loader{
+    width: 90px;
+    height: 24px;
+    background: linear-gradient(#000 0 0) 0 0/0% 100% no-repeat, radial-gradient(circle 3px, #eeee89 90%, #0000) 0 0/20% 100% #000;
+    padding: 2px 0;
+    box-sizing: border-box;
+    display: flex;
+    animation: anim-0 3s infinite steps(6);
+    overflow: hidden;
+}
+
+.loader::before{
+    content: "";
+    width: 20px;
+    background: #ffff2d;
+    border-radius: 50%;
+    clip-path: polygon(50% 50%, 100% 0, 100% 0, 0 0, 0 100%, 100% 100%, 100% 100%);
+    animation: anim-1 .25s .153s infinite steps(5) alternate, anim-2 3s infinite linear;
+}
+
+@keyframes anim-0 {
+    100%{
+        background-size: 120% 100%, 20% 100%;
+    }
+}
+
+@keyframes anim-1 {
+    0%{
+        clip-path: polygon(50% 50%, 100% 0, 100% 0, 0 0, 0 100%, 100% 100%, 100% 100%);
+    }
+
+    100%{
+        clip-path: polygon(50% 50%, 100% 65%, 100% 0, 0 0, 0 100%, 100% 100%, 100% 35%);
+    }
+}
+
+@keyframes anim-2 {
+    0%{
+        transform: translate(-100%);
+    }
+
+    100%{
+        transform: translate(90px);
+    }
+}
