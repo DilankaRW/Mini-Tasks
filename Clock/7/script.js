@@ -19,7 +19,7 @@ function setDate(){
     const mins = now.getMinutes();
     const hrs = now.getHours();
     const monthName = [
-        'January','February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'
+        'January','February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December',
     ];
 
     if (hrs > 12) {
@@ -30,7 +30,7 @@ function setDate(){
 
     seconds.innerHTML = String(secs).padStart(2, '0');
     minutes.innerHTML = String(mins).padStart(2, '0');
-    month.innerHTML = monthName(mm);
+    month.innerHTML = monthName[mm];
     day.innerHTML = dd;
     year.innerHTML = yyyy;
 }
