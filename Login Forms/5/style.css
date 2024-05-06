@@ -198,14 +198,17 @@ a{
     outline: transparent;
 }
 
-.nav-dot{
-    display: inline-block;
-    background-color: #00000099;
-    top: -5px;
-    width: 11px;
-    height: 11px;
-    margin: 0 4px;
-    position: relative;
-    border-radius: 100%;
+.column--bg{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    overflow: hidden;
 }
 
+.bg-img{
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
