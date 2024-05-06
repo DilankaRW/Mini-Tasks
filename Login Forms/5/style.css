@@ -79,3 +79,57 @@ h1{
     position: relative;
     z-index: 1;
 }
+
+.segmented-btn[aria-selected=true]{
+    color: hsl(233, 10%, 10%);
+}
+
+.segmented-focus{
+    background-color: white;
+    border-radius: 0.625em;
+    pointer-events: none;
+    position: absolute;
+    top: 0.25em;
+    bottom: 0.25em;
+    left: 0.25em;
+    width: calc(50% - 0.5em);
+}
+
+.field{
+    position: relative;
+    margin-bottom: 2.25em;
+}
+
+.input-textbox{
+    width: 100%;
+    background-color: transparent;
+    border-radius: 0.75em;
+    box-shadow: 0 0 0 0.125em hsl(233, 10%, 80%) inset;
+    outline: transparent;
+    padding: 1.5em 1em 0.5em 1em;
+    padding-inline-end: 3.5em;
+    appearance: none;
+}
+
+.label{
+    color: hsl(var(--hue), 10%, 30%);
+    cursor: text;
+    display: flex;
+    position: absolute;
+    bottom: 0.4em;
+    left: 1em;
+    pointer-events: none;
+}
+
+.btn{
+    width: 100%;
+    background-color: hsl(223, 90%, 50%);
+    border-radius: 0.75em;
+    box-shadow: 0 0 0 0.1em hsl(223deg, 10%, 90% / 0%), 0 0 0 0.3em hsl(223deg, 90%, 50% / 0%);
+    color: white;
+    margin-bottom: 1.5em;
+    padding: 1em;
+    cursor: pointer;
+    display: block;
+    outline: transparent;
+}
