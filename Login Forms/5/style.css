@@ -133,3 +133,39 @@ h1{
     display: block;
     outline: transparent;
 }
+
+.or{
+    color: hsl(233, 10%, 40%);
+    display: flex;
+    align-items: center;
+    font-size: 0.75em;
+    line-height: 2;
+    margin-bottom: 1.5em;
+    text-align: center;
+}
+
+.or::before,
+.or::after{
+    background-color: hsl(233, 10%, 70%);
+    content: "";
+    display: block;
+    flex: 1;
+    height: 1px;
+}
+
+.or::before{
+    margin-inline-end: 0.75em;
+}
+
+.or::after{
+    margin-inline-start: 0.75em;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    margin-bottom: 1.5em;
+}
+
