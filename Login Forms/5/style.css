@@ -30,3 +30,52 @@ body{
     position: relative;
 }
 
+.header{
+    width: 100%;
+    padding: 1.5em 0;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    line-height: 1;
+    margin: auto;
+    width: 90rem;
+}
+
+.form{
+    width: 22em;
+    flex-shrink: 0;
+    margin: 3em 0;
+    height: min-content;
+}
+
+h1{
+    font-size: 2em;
+    margin: 0 0 1.5rem;
+    text-align: center;
+}
+
+.segmented{
+    position: relative;
+    background-color: hsl(223, 10%, 90%);
+    border-radius: 0.75em;
+    display: flex;
+    margin-bottom: 1.5em;
+    min-height: 3em;
+}
+
+.segmented-btn{
+    border-radius: 0.875em;
+    box-shadow: 0 0 0 0.1875em var(--focus-t) inset;
+    color: hsl(233, 10%, 40%);
+    cursor: pointer;
+    outline: transparent;
+    padding: 0.75em;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+}
