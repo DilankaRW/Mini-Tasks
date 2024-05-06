@@ -1,0 +1,32 @@
+*{
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+}
+
+.login{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    color: hsl(223, 10%, 10%);
+    font: 1em/1.5 sans-sefif;
+}
+
+.column{
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    padding: 1.5em;
+    position: relative;
+}
+
