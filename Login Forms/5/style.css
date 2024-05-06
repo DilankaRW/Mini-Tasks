@@ -198,3 +198,14 @@ a{
     outline: transparent;
 }
 
+.nav-dot{
+    display: inline-block;
+    background-color: #00000099;
+    top: -5px;
+    width: 11px;
+    height: 11px;
+    margin: 0 4px;
+    position: relative;
+    border-radius: 100%;
+}
+
