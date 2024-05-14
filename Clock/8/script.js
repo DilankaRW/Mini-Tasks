@@ -22,3 +22,4 @@ function update(){
 }
 
 setInterval(update, 900)
+update();
