@@ -1,0 +1,45 @@
+.container{
+    position: relative;
+    height: 500px;
+    width: 700px;
+    perspective: 500px;
+    transform-style: preserve-3d;
+}
+
+.box{
+    width: 440px;
+    height: 440px;
+    box-shadow: 0 0 10px #0000004d;
+    border: 1px solid #bbb;
+    border-radius: 25px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 800ms ease-in-out;
+    overflow: hidden;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+.box{
+    left: 1000%;
+}
+
+.box:nth-last-of-type(6){
+    left: 40%;
+    transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-200px);
+    opacity: 0;
+    z-index: 2;
+}
+
+.box:nth-last-of-type(5){
+    left: 35%;
+    transform: translate(-50%, -50%) rotateY(-10deg) translateZ(-150px);
+    opacity: 0.25;
+    z-index: 2;
+}
+
