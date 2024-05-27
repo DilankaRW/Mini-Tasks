@@ -21,7 +21,7 @@ body{
     transform-style: preserve-3d;
 }
 
-.font-side, .back-side{
+.front-side, .back-side{
     height: 100%;
     width: 100%;
     border-radius: 2rem;
@@ -30,7 +30,7 @@ body{
     backface-visibility: hidden;
 }
 
-.font-side{
+.front-side{
     background-image: url(image.jpg);
     background-size: 100% 100%;
 }
@@ -38,5 +38,14 @@ body{
 .back-side{
     background-color: black;
     transform: rotateY(180deg);
-    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.container:hover > .card{
+    cursor: pointer;
+    transform: rotateY(180deg);
 }
