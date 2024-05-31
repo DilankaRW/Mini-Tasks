@@ -44,7 +44,7 @@ body{
     margin-right: 40px;
     margin-left: 40px;
     min-width: 90px;
-    position: absolute;
+    position: relative;
 }
 
 .col:not(:last-child)::before,
