@@ -1,0 +1,26 @@
+.spinner{
+    width: 200px;
+    height: 200px;
+    background: #f5dad8;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: spin 6s linear infinite;
+}
+
+img{
+    display: block;
+    width: 100%;
+    animation: bounce 0.2s linear infinite alternate;
+}
+
+@keyframes spin {
+    to{
+        transform: rotate(-1turn);
+    }
+}
+
+@keyframes bounce {
+    to{
+        translate: 0 20px;
+    }
+}
