@@ -20,3 +20,22 @@
     transform-origin: center;
     transition: 0.75s ease;
 }
+
+.left{
+    background-image: url(image.jpg);
+    border-right: 1px solid #804a00;
+}
+
+.middle{
+    font-size: 0rem;
+    background-image: url(image.jpg);
+}
+
+.right{
+    background-image: url(image.jpg);
+    border-left: 1px solid #804a00;
+}
+
+.container:hover{
+    grid-template-columns: 0fr 1fr 0fr;
+}
