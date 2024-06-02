@@ -1,0 +1,31 @@
+.list{
+    display: flex;
+    gap: 1.75rem;
+    list-style-type: none;
+}
+
+.item{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font: 900 0.8rem helvetica sans-serif;
+    color: #00000099;
+    text-transform: uppercase;
+}
+
+.title{
+    text-align: center;
+}
+
+input{
+    width: 175px;
+    font: 0.75rem helvetica sans-serif;
+    color: #00000080;
+    padding: 0.75rem;
+    border: 0.5px solid #00000059;
+    outline: none;
+}
+
+input::-webkit-inner-spin-button{
+    opacity: 1;
+}
