@@ -1,0 +1,61 @@
+body{
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background: #ffffff;
+}
+
+.rainy{
+    height: 50px;
+    width: 50px;
+    background: #CCCCCC;
+    box-shadow:
+    #CCCCCC 65px -15px 0 -5px,
+    #CCCCCC 25px -25px,
+    #CCCCCC 30px 10px,
+    #CCCCCC 60px 15px 0 -10px,
+    #CCCCCC 85px 5px 0 -5px;
+    border-radius: 50%;
+    animation: raint 5s ease-in-out infinite 1s;
+    position: relative;
+}
+
+.rainy::after{
+    content: '';
+    height: 15px;
+    width: 120px;
+    background: #000000;
+    border-radius: 50%;
+    opacity: 0.2;
+    position: absolute;
+    left: 5px;
+    bottom: -60px;
+    animation: rainy_shadow 5s ease-in-out infinite 1s;
+    transform: scale(1);
+}
+
+.rainy::before{
+    content: '';
+    height: 6px;
+    width: 3px;
+    border-radius: 50%;
+    display: block;
+    opacity: 0.3;
+    animation: rainy_rain .7s infinite linear;
+    transform: scale(.9);
+}
+
+@keyframes rainy {
+    50%{
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes rainy_shadow {
+    50%{
+        transform: translateY(20px) scale(.7);
+        opacity: 0.05;
+    }
+}
+
