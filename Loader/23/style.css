@@ -1,0 +1,32 @@
+.circles{
+    --time: 12s;
+    --count: 13;
+    --spokes: 6;
+    animation: rotate var(--time) linear infinite;
+}
+
+@keyframes rotate {
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.circles, .circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.circle{
+    width: 50vmin;
+    height: 50vmin;
+    border-radius: 50%;
+    animation: rotate var(--time) linear infinite;
+    animation-delay: calc(var (--delay, 0) * var(--time)/var(--count));
+}
+
