@@ -1,3 +1,11 @@
+/* body{
+    height: 90vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    background: #ffffff;
+} */
+
 .circles{
     --time: 12s;
     --count: 13;
@@ -17,7 +25,7 @@
 
 .circles, .circle{
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -30,3 +38,30 @@
     animation-delay: calc(var (--delay, 0) * var(--time)/var(--count));
 }
 
+.inner{
+    width: 25vmin;
+    height: 25vmin;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate calc(var(--time)/var(--spokes)) ease infinite reverse;
+    animation-delay: calc(var(--delay, 0) * var(--time)/var(--count));
+}
+
+.dot{
+    width: 5vmin;
+    height: 5vmin;
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dot::before{
+    font-size: 8vmin;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
