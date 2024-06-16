@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper active">
+        <header>
+            <h1>
+                QR Code Generator
+            </h1>
+            <p>
+                Paste a URL or enter text to create QR code
+            </p>
+        </header>
+        <div class="form">
+            <input type="text" value="todo" spellcheck="false" placeholder="Enter text or URL">
+            <button>Generate QR Code</button>
+        </div>
+        <div class="qr-code">
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200&data=todo" alt="">
+        </div>
+    </div>
+</body>
+</html>
