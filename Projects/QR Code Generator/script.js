@@ -13,11 +13,11 @@ img.addEventListener(
 )
 
 button.addEventListener(
-    'clivk',
+    'click',
     () => {
         const value = input.value.trim();
         button.innerText = 'Generating QR Code...';
-        img.src = `https://api.qrserver.com/v1/create-qr-code/?size=200*200&data=${value}`;
+        img.src = `https://api.qrserver.com/v1/create-qr-code/?size=200&data=${value}`;
     }
 )
 
