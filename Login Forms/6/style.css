@@ -1,0 +1,68 @@
+*{
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+}
+
+.login{
+    display: flex;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    color: hsl(223, 10%, 10%);
+    font: 1em/1.5 "sans-serif";
+}
+
+.column{
+    width: 50%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    padding: 1.5em;
+    position: relative;
+}
+
+.header{
+    width: 100%;
+    padding: 1.5em 0;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    line-height: 1;
+    margin: auto;
+    width: 9rem;
+}
+
+.form{
+    width: 22em;
+    flex-shrink: 0;
+    margin: 3em 0;
+    height: min-content;
+}
+
+h1{
+    font-size: 2em;
+    margin: 0 0 1.5rem;
+    text-align: center;
+}
+
+.segmented{
+    position: relative;
+    background-color: hsl(233, 10%, 90%);
+    border-radius: 0.75em;
+    display: flex;
+    margin-bottom: 1.5em;
+    min-height: 3em;
+}
