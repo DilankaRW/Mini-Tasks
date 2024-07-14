@@ -66,3 +66,47 @@ h1{
     margin-bottom: 1.5em;
     min-height: 3em;
 }
+
+.segmented-btn{
+    border-radius: 0.875em;
+    box-shadow: 0 0 0 0.1875em var(--focus-t) inset;
+    color: hsl(223, 10%, 40%);
+    cursor: pointer;
+    outline: transparent;
+    padding: 0.75em;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.segmented-btn[aria-selected=true]{
+    color: hsl(223, 10%, 10%);
+}
+
+.segmented-focus{
+    background-color: white;
+    border-radius: 0.625em;
+    pointer-events: none;
+    position: absolute;
+    top: 0.25em;
+    bottom: 0.25em;
+    left: 0.25em;
+    width: calc(50% - 0.5em);
+}
+
+.field{
+    position: relative;
+    margin-bottom: 2.25em;
+}
+
+.input-textbox{
+    width: 100%;
+    background-color: transparent;
+    border-radius: 0.75em;
+    box-shadow: 0 0 0 0.125em hsl(233, 10%, 80%) inset;
+    outline: transparent;
+    padding: 1.5em 1em 0.5em 1em;
+    padding-inline-end: 3.5em;
+    appearance: none;
+}
