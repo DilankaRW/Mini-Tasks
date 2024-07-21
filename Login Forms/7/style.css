@@ -120,3 +120,53 @@ a:hover{
     left: 20px;
     transition: 0.2s;
 }
+
+.input-field:focus ~ .label,
+.input-field:valid ~ .label{
+    background-color: var(--primary-color);
+    color: var(--black-color);
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 14px;
+    border-radius: 30px;
+    padding: 0 10px;
+}
+
+i{
+    position: absolute;
+    top: 18px;
+    right: 25px;
+    font-size: 20px;
+}
+
+.remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+.remember-me{
+    display: flex;
+    gap: 4px;
+}
+
+.input-submit{
+    width: 100%;
+    height: 50px;
+    background: #ececec;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register{
+    text-align: center;
+}
+
+.register a{
+    font-weight: 500;
+}
