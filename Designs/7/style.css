@@ -1,0 +1,59 @@
+:root{
+    --base: 4rem;
+}
+
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    color: #d5d5d5;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 190vh;
+    margin: 0;
+    font-size: calc(0.3 * var(--base));
+}
+
+h2{
+    font-weight: 500;
+    text-align: center;
+    font-size: var(--base);
+    margin: 0;
+}
+
+h3{
+    font-weight: 500;
+    font-size: calc(0.6 * var(--base));
+    margin: 0;
+}
+
+.card{
+    height: calc(8 * var(--base));
+    width: calc(12 * var(--base));
+    background: linear-gradient(120deg, #ff8064, #725bdc);
+    color: black;
+    border-radius: calc(0.5 * var(--base));
+    display: flex;
+    flex-direction:  column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--base);
+    position: fixed;
+    margin: calc(2 * var(--base)) calc(5 * var(--base)) calc(5 * var(--base)) calc(5 * var(--base));
+}
+
+button{
+    background-color: #000;
+    font-size: calc(0.4 * var(--base));
+    border: none;
+    color: #e5e5e5;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 400;
+    padding: calc(0.35 * var(--base)) calc(0.8 * var(--base));
+}
