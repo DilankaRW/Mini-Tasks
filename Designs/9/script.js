@@ -18,7 +18,7 @@ Highcharts.chart(
         plotOptions:{
             series:{
                 borderRadius: '25%'
-            }
+            },
         },
         series:[
             {
@@ -35,7 +35,7 @@ Highcharts.chart(
                 type:'column',
                 name: 'Company 3',
                 data: [78, 12, 45, 68, 125]
-            },
+            }
         ],
         dataLabels:{
             enabled: true,
@@ -47,7 +47,7 @@ Highcharts.chart(
             style:{
                 fontSize: '13px',
                 fontFamily: 'sans-serif'
-            }
-        }
+            },
+        },
     },
-)
+);
