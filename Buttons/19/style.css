@@ -1,0 +1,80 @@
+body{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color .25s;
+    color: #1e1e1e;
+    background: linear-gradient(to bottom right, #eefff4 25%, #a0ffd9 50%, #5c0095 75%, #01072a);
+    background-size: 300% 300%;
+    background-position: top left;
+    transition: background-position .5s;
+}
+
+input{
+    visibility: hidden;
+}
+
+label{
+    display: block;
+    height: 2em;
+    width: 3.75em;
+    font-size: 2rem;
+    border: .125em solid currentColor;
+    border-radius: 2em;
+    -webkit-tap-highlight-color: transparent;
+    cursor: pointer;
+    position: relative;
+}
+
+label::before,
+label::after{
+    content: '';
+    display: block;
+    border-radius: 1em;
+    position: absolute;
+    z-index: 1;
+}
+
+label::after{
+    width: 1.125em;
+    height: 1.125em;
+    box-shadow: .25em .25em #5901d8;
+    right: .9em;
+    top: .125em;
+}
+
+label::before{
+    width: .625em;
+    height: .625em;
+    background-color: #ffc409;
+    outline: .25em dotted #ffc409;
+    outline-offset: .125em;
+    left: .7em;
+    top: .7em;
+}
+
+span{
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: currentColor;
+    border-radius: 2em;
+    top: .25em;
+    left: .25em;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -9999px;
+    transition: left .25s;
+    z-index: 2;
+}
+
+input:checked~label span{
+    left: 2em;
+}
+
+body:has(input:checked){
+    background-position: 100% 100%;
+    color: #d0d0d0;
+}
