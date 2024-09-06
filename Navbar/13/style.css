@@ -1,0 +1,86 @@
+ul{
+    position: relative;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+a{
+    position: relative;
+    background: #ffffff0d;
+    color: #fff;
+    font-size: 1em;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    font-weight: 300;
+    box-shadow: 0 15px 35px #00000033;
+    z-index: 2;
+    backdrop-filter: blur(15px);
+    overflow: hidden;
+}
+
+a::before{
+    position: absolute;
+    content: '';
+    background: #ffffff1a;
+    width: 100%;
+    height: 50%;
+    inset: 0;
+}
+
+li:first-child a{
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+
+li:nth-last-child(2) a{
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+.indicator{
+    position: absolute;
+    z-index: 1;
+    width: 1;
+    width: 85px;
+    height: 45px;
+    top: 0;
+    transition: 0.5s;
+}
+
+.indicator::before{
+    --color: #5da6ff;
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: var(--color);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: 0.5s;
+    box-shadow: 0 0 15px var(--color),
+                0 0 30px var(--color),
+                0 0 45px var(--color),
+                0 0 60px var(--color);
+}
+
+li:nth-child(2):hover~.indicator::before{
+    --color: #ff0;
+}
+
+li:nth-child(3):hover~.indicator::before{
+    --color: #0f0;
+}
+
+li:nth-child(4):hover~.indicator::before{
+    --color: #ff308f;
+}
+
+li:nth-child(5):hover~.indicator::before{
+    --color: #ff9100;
+}
