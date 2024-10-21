@@ -99,3 +99,70 @@ strong{
     background-size: 50px 50px;
     opacity: 0.5;
 }
+
+@keyframes animStar {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-135rem);
+    }
+}
+
+@keyframes animStarRotate {
+    from{
+        transform: rotate(360deg);
+    }
+    to{
+        transform: rotate(0);
+    }
+}
+
+@keyframes animGradient {
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes animPulse {
+    0%{
+        transform: scale(0.75);
+        box-shadow: 0 0 0 0 #000000b3;
+    }
+
+    70%{
+        transform: scale(1);
+        box-shadow: 0 0 0 10px #00000000;
+    }
+
+    100%{
+        transform: scale(0.75);
+        box-shadow: 0 0 0 0 #00000000;
+    }
+}
+
+button:hover .container-stars{
+    z-index: 1;
+    background-color: #212121;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+button:active{
+    border: double 4px #fe53bb;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    animation: none ;
+}
+
+button:active .circle{
+    background: #fe53bb;
+}
